@@ -1,0 +1,25 @@
+.unity-text-element {
+    font-size: 24px;
+}
+
+.unity-base-text-field {
+    width: 160px;
+}
+
+.unity-base-field {
+    width: 400px;
+}
+
+.action-button {
+    font-size: 28px;
+    width: 180px;
+    transition-property: scale;
+    transition-duration: 0.2s;
+}
+
+.action-button:hover {
+    scale: 1.2 1.2;
+    transition-property: scale;
+    transition-duration: 0.2s;
+}
+

@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/ComparePhysicsMethods/UIs/SampleUI.uss?fileID=7433441132597879392&amp;guid=0c93811883b62464f90a48161e7d0476&amp;type=3#SampleUI" />
+    <engine:Button text="Legacy" enabled="true" name="button-legacy-collision" class="unity-button action-button" />
+    <engine:Button text="Contact" enabled="true" name="button-contact-collision" class="unity-button action-button" />
+    <engine:Button text="DOTS" enabled="true" name="button-dots" class="unity-button action-button" />
+    <engine:IntegerField label="Number of Objects" value="1000" name="input-number-of-objects" />
+    <engine:IntegerField label="Height" value="20" name="input-height" />
+    <engine:FloatField label="Grid" value="2" name="input-grid" />
+</engine:UXML>
