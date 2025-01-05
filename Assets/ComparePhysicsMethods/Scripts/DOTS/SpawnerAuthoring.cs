@@ -4,6 +4,7 @@ using Unity.Entities;
 class SpawnerAuthoring : MonoBehaviour
 {
     public GameObject Prefab;
+    public ECSSpawnTaskManager ECSSpawnTaskManager;
 }
 
 class SpawnerBaker : Baker<SpawnerAuthoring>
@@ -12,13 +13,11 @@ class SpawnerBaker : Baker<SpawnerAuthoring>
     {
         Entity entity = GetEntity(TransformUsageFlags.None);
         Debug.Log(entity.Index);
-        AddComponent(entity, new Spawner
+        AddComponent(entity, new ECSSpawner
         {
             // デフォルトでは、各オーサリングGameObjectはEntityに変換されます。
             // GameObject（またはオーサリングコンポーネント）が与えられると、GetEntityは生成されるEntityを検索します。
-            Prefab = GetEntity(authoring.Prefab, TransformUsageFlags.Dynamic),
-            SpawnPositionOrigin = authoring.transform.position,
-            Enable = true, 
+            Prefab = GetEntity(authoring.Prefab, TransformUsageFlags.None),
         });
     }
 }
